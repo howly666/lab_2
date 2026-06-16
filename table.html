@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Герои Dota 2</title>
+</head>
+
+<body>
+    <ul type="none">
+        <li><a href="index.html">Герои Dota 2</a></li>
+        <li><a href="table.html">Статистика</a></li>
+    </ul>
+    <hr>
+
+    <h1>Каталог героев Dota 2</h1>
+
+    <div class="forms-row">
+
+        <div class="panel">
+            <div class="panel-title"><h3>Фильтр</h3></div>
+            <form id="filter">
+                <p>
+                    <label for="heroName">Имя героя:</label>
+                    <input type="text" id="heroName">
+                </p>
+                <p>
+                    <label for="filterRole">Роль:</label>
+                    <input type="text" id="filterRole">
+                </p>
+                <p>
+                    <label for="filterAttribute">Атрибут:</label>
+                    <input type="text" id="filterAttribute">
+                </p>
+                <p>
+                    <label for="filterCombat">Тип боя:</label>
+                    <input type="text" id="filterCombat">
+                </p>
+
+                <div class="btn-group">
+                    <input type="button" id="findBtn" value="Найти">
+                    <input type="button" id="clearBtn" value="Очистить фильтры">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="sort-section">
+        <h3>Сортировка</h3>
+
+        <div class="sort-level">
+            <label>Уровень 1:
+                <select id="sort1Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Имя</option>
+                    <option value="attribute">Атрибут</option>
+                    <option value="strength">Сила</option>
+                    <option value="agility">Ловкость</option>
+                    <option value="intelligence">Интеллект</option>
+                </select>
+                <select id="sort1Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="sort-level">
+            <label>Уровень 2:
+                <select id="sort2Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Имя</option>
+                    <option value="attribute">Атрибут</option>
+                    <option value="strength">Сила</option>
+                    <option value="agility">Ловкость</option>
+                    <option value="intelligence">Интеллект</option>
+                </select>
+                <select id="sort2Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="sort-level">
+            <label>Уровень 3:
+                <select id="sort3Field">
+                    <option value="none">Нет</option>
+                    <option value="name">Имя</option>
+                    <option value="attribute">Атрибут</option>
+                    <option value="strength">Сила</option>
+                    <option value="agility">Ловкость</option>
+                    <option value="intelligence">Интеллект</option>
+                </select>
+                <select id="sort3Order">
+                    <option value="asc">По возрастанию</option>
+                    <option value="desc">По убыванию</option>
+                </select>
+            </label>
+        </div>
+    <div class="btn-group">
+            <input type="button" id="sortApplyBtn" value="Применить сортировку">
+            <input type="button" id="sortResetBtn" value="Сбросить сортировку">
+    </div>
+    </div>
+
+    <table border="1"   >
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Имя героя</th>
+                <th>Роль</th>
+                <th>Основной атрибут</th>
+                <th>Сила</th>
+                <th>Ловкость</th>
+                <th>Интеллект</th>
+                <th>Тип боя</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
